@@ -4,6 +4,7 @@
   --color-grey: #d1d1d1;
   --color-text: #22243b;
   --color-accent: #f16e03;
+  --color-white: white;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
     rgba(157, 157, 157, 0.28310296474358976) 100%
   );
   font-size: 1.2rem;
+  accent-color: var(--color-accent);
 }
 
 #root {
@@ -46,12 +48,33 @@ code {
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 ul {
   list-style: none;
   padding-left: none;
+  padding-inline-start: 0px;
 }
 
 button {
   outline: none;
   border: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-grey);
 }
